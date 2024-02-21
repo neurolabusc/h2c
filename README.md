@@ -19,3 +19,10 @@ python make_hounsfield.py
 python h2c.py hounsfield.nii 
 python c2h.py chounsfield.nii
 ```
+
+Note that [niimath](https://github.com/rordenlab/niimath) provides a high performance native executable for computing the same conversions, and combining them with the many image processing functions of fslmath:
+
+```
+niimath hounsfield -h2c chounsfield
+niimath chounsfield -c2h hchounsfield
+```
